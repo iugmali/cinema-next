@@ -4,11 +4,11 @@ import styles from './DefaultPage.module.scss';
 type Props = {
 
 };
-const Header = (props: Props) => {
+const Footer = (props: Props) => {
   return (
-    <div>
+    <footer>
 
-    </div>
+    </footer>
   );
 };
-export default Header;
+export default Footer;
