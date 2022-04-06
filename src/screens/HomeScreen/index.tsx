@@ -4,13 +4,19 @@ import Image from 'next/image';
 import {ImageLoaderProps} from "next/dist/client/image";
 import classNames from "classnames";
 
-const myLoader = ({src,width,quality}: ImageLoaderProps) => {
+const myLoader = ({src}: ImageLoaderProps) => {
   return `https://image.tmdb.org/t/p/w500${src}`
 }
 interface Props {
-  movies: any;
-  series: any;
-  people: any;
+  movies: {
+    results: any[]
+  };
+  series: {
+    results: any[]
+  };
+  people: {
+    results: any[]
+  };
 }
 export default function HomeScreen({movies, series, people}: Props) {
   return (
