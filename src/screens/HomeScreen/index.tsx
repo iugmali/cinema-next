@@ -3,7 +3,6 @@ import PageTitle from "components/PageTitle";
 import Image from 'next/image';
 import {ImageLoaderProps} from "next/dist/client/image";
 import classNames from "classnames";
-import {getTrendingMovies, getTrendingPerson, getTrendingTV} from "../../data/trending";
 
 const myLoader = ({src}: ImageLoaderProps) => {
   return `https://image.tmdb.org/t/p/w500${src}`
@@ -52,8 +51,8 @@ export default function HomeScreen({movies, series, people}: Props) {
                     alt="Poster do Filme"
                     placeholder={"blur"}
                     blurDataURL={"/filme-poster.png"}
-                    width={350}
-                    height={600}
+                    width={236}
+                    height={354}
                   />
                 </div>
                 <h3 className={styles.section__item__title}>{movie.title} - ({movie.release_date})</h3>
@@ -131,17 +130,4 @@ export default function HomeScreen({movies, series, people}: Props) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const movies = await getTrendingMovies();
-  const series = await getTrendingTV();
-  const people = await getTrendingPerson();
-  return {
-    props: {
-      movies,
-      series,
-      people
-    }
-  }
 }
