@@ -9,7 +9,7 @@ import {useEffect} from "react";
 export default function HomeScreen({movies, series, person}: any) {
   return (
     <div className={styles.home}>
-      <PageTitle title={"Trending"} />
+      <PageTitle title={"404 - Not Found"} />
       <h1 className={styles.title}>
         404 - Not Found
       </h1>

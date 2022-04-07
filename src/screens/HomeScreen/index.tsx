@@ -51,8 +51,8 @@ export default function HomeScreen({movies, series, people}: Props) {
                     alt="Poster do Filme"
                     placeholder={"blur"}
                     blurDataURL={"/filme-poster.png"}
-                    width={350}
-                    height={600}
+                    width={236}
+                    height={354}
                   />
                 </div>
                 <h3 className={styles.section__item__title}>{movie.title} - ({movie.release_date})</h3>
