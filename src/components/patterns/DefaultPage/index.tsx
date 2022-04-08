@@ -4,6 +4,7 @@ import styles from './DefaultPage.module.scss';
 import Header from "./Header";
 import Footer from "./Footer";
 import PageTitle from "../../PageTitle";
+import {RecoilRoot} from "recoil";
 
 type Props = {
   children?: React.ReactNode;
@@ -12,15 +13,17 @@ type Props = {
 };
 const DefaultPage = (props: Props) => {
   return (
-    <div className={styles.page} >
-      <PageTitle title={props.title} />
-      <Header />
-      <main className={styles.page__main}>
-        <h1 className={styles.page__title}>{props.pageTitle ? props.pageTitle : props.title}</h1>
-        {props.children}
-      </main>
-      <Footer />
-    </div>
+    <RecoilRoot>
+      <div className={styles.page} >
+        <PageTitle title={props.title} />
+        <Header title={props.title} />
+        <main className={styles.page__main}>
+          <h1 className={styles.page__title}>{props.pageTitle ? props.pageTitle : ''}</h1>
+          {props.children}
+        </main>
+        <Footer />
+      </div>
+    </RecoilRoot>
   );
 };
 export default DefaultPage;

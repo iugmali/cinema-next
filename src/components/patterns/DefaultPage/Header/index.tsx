@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styles from './Header.module.scss';
-import PageLink from "../../../PageLink";
 
 type Props = {
   title?: string;
@@ -8,9 +7,9 @@ type Props = {
 const Header = (props: Props) => {
   return (
     <header className={styles.header}>
-      <nav>
-        <PageLink to={"/"}>{props.title ?? ''}</PageLink>
-      </nav>
+      <p className={styles.header__title}>
+        {props.title ?? ''}
+      </p>
     </header>
   );
 };

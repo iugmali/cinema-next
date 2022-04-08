@@ -7,7 +7,7 @@ type Props = {
 const Footer = (props: Props) => {
   return (
     <footer className={styles.footer}>
-      <a href="https://iugmali.com">iugmali.com</a>
+      <p className={styles.footer__title}>Created by <a href="https://iugmali.com">iugmali.com</a></p>
     </footer>
   );
 };

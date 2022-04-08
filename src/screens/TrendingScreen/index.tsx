@@ -6,7 +6,7 @@ import {MediaItemList} from "types/media";
 export default function TrendingScreen(props:MediaItemList) {
   return (
     <DefaultPage title={"Trending Media"}>
-      <Section title={"Movies"}>
+      <Section title={""}>
         <MovieList {...props}/>
       </Section>
     </DefaultPage>

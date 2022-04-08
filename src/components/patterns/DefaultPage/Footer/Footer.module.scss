@@ -1,8 +1,29 @@
+@import "/src/styles/breakpoints";
 .footer {
   width: 100%;
-  padding: 2rem;
+  padding: .5rem;
   background: none;
-  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -10px 9px -7px inset;
   display: flex;
   justify-content: center;
+  &__title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, xs)) {
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -25px 18px -14px inset;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -25px 18px -14px inset;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    &__title {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
 }

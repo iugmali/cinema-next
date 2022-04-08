@@ -1,8 +1,6 @@
-export interface Movie {
-  id: string;
-  backdrop_path: string;
-  poster_path: string;
+import {MediaItem} from "./media";
+
+export interface Movie extends MediaItem{
   title: string;
   release_date: string;
-  overview: string;
 }
