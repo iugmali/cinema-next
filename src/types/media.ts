@@ -2,6 +2,19 @@ import {Serie} from "./serie";
 import {Movie} from "./movie";
 import {Person} from "./person";
 
+export interface MediaVideoItem {
+  iso_639_1?: string;
+  iso_3166_1?: string;
+  name: string;
+  key?: string;
+  site: string;
+  size?: string;
+  type?: string;
+  official?: string;
+  published_at?: string;
+  id: string;
+}
+
 export interface MediaItem {
   first_air_date?: string;
   release_date?: string;
@@ -22,5 +35,8 @@ export interface MediaItemList {
   };
   people?: {
     results: Person[]
+  };
+  videos?: {
+    results: Video[]
   };
 }
