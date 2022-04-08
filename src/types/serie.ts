@@ -1,8 +1,6 @@
-export interface Serie {
-  id: string;
-  backdrop_path: string;
-  poster_path: string;
+import {MediaItem} from "./media";
+
+export interface Serie extends MediaItem{
   name: string;
   first_air_date: string;
-  overview: string;
 }

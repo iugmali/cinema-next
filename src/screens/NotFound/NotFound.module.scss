@@ -1,10 +1,23 @@
 .home {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: 20% auto auto 20%;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
   .title {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
     font-size: 2.2rem;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
     text-align: center;
     margin: 1rem;
+  }
+  a {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
   }
 }

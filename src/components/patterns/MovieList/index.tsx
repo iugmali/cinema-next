@@ -1,6 +1,6 @@
 import Itens from "components/Itens";
 import {MediaItemList} from "../../../types/media";
-import MovieItem from "components/Itens/MovieItem";
+import MovieItem from "components/Itens/MediaItem";
 
 export default function MovieList ({movies}: MediaItemList) {
   return (

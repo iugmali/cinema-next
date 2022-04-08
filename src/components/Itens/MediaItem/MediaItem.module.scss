@@ -1,0 +1,76 @@
+@import "/src/styles/breakpoints.scss";
+.item {
+  a {
+    background: none;
+    &:hover, &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      transition: 0.5s;
+      .item__title {
+        color: antiquewhite;
+        text-shadow: 2px 4px 11px #000000;
+        transition: 0.1s;
+      }
+      .item__descricao {
+        color: #000000;
+        font-weight: 700;
+        //text-shadow: 2px 4px 11px #000000;
+        transition: 0.1s;
+      }
+    }
+    //box-shadow: rgba(50, 50, 93, 0.25) 0px 25px 50px -10px, rgba(0, 0, 0, 0.3) 0px 15px 30px -15px;
+    border-radius: .5rem;
+    display: grid;
+    grid-template-rows: auto auto 15% 15%;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    .item__image__desktop {
+      display: none;
+    }
+    .item__image__mobile {
+      display: block;
+    }
+    .item__title{
+      justify-self: center;
+      font-family: 'Barlow', sans-serif;
+      text-align: center;
+      font-weight: 700;
+      color: rgb(33,33,33);
+      font-size: .7rem;
+      padding: 0.3rem;
+      @media screen and (min-width: map-get($grid-breakpoints,xs)) {
+        font-size: .9rem;
+        padding: 0.5rem;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints,md)) {
+        font-size: 1.2rem;
+      }
+    }
+    .item__descricao {
+      justify-self: center;
+      font-family: 'Barlow', sans-serif;
+      text-align: center;
+      font-weight: 400;
+      color: rgb(33,33,33);
+      font-size: .8rem;
+      padding-bottom: 0.5rem;
+      @media screen and (min-width: map-get($grid-breakpoints,md)) {
+        font-size: 1rem;
+      }
+    }
+    @media screen and (min-width: map-get($grid-breakpoints,xl)){
+      .item__image__mobile {
+        display: none;
+      }
+      .item__image__desktop {
+        display: block;
+      }
+      padding: 0;
+      grid-template-columns: 236px;
+      grid-column-gap: .5rem;
+    }
+
+  }
+}

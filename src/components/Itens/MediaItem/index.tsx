@@ -1,4 +1,4 @@
-import styles from './MovieItem.module.scss';
+import styles from './MediaItem.module.scss';
 import React from "react";
 import {Movie} from "types/movie";
 import PageLink from "components/PageLink";
@@ -6,9 +6,9 @@ import Image from "next/image";
 import ImageLoader from "../../../utils/ImageLoader";
 
 
-const MovieItem = (movie: Movie) => {
+const MediaItem = (movie: Movie) => {
   return (
-    <li className={styles.item}>
+    <article className={styles.item}>
       <PageLink to={`/movies/${movie.id}`} prefetch={false}>
         <div className={styles.item__image__mobile}>
           <Image
@@ -33,10 +33,10 @@ const MovieItem = (movie: Movie) => {
           />
         </div>
         <h3 className={styles.item__title}>{movie.title}</h3>
-        <h3 className={styles.item__title}>({movie.release_date.slice(0,4)})</h3>
+        <p className={styles.item__descricao}>({movie.release_date.slice(0,4)})</p>
         {/*<p className={styles.item__descricao}>{movie.overview}</p>*/}
       </PageLink>
-    </li>
+    </article>
   )
 }
-export default MovieItem;
+export default MediaItem;
