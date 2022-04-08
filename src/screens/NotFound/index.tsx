@@ -1,18 +1,16 @@
 import styles from './NotFound.module.scss';
 import PageTitle from "components/PageTitle";
-import Image from 'next/image';
-import {ImageLoaderProps} from "next/dist/client/image";
-import Poster from '../../../public/filme-poster.png'
-import {useEffect} from "react";
+import PageLink from "../../components/PageLink";
 
 
-export default function HomeScreen({movies, series, person}: any) {
+export default function NotFound() {
   return (
     <div className={styles.home}>
       <PageTitle title={"404 - Not Found"} />
       <h1 className={styles.title}>
-        404 - Not Found
+        Eitcha...
       </h1>
+      <PageLink to={"/"}>Voltar para o início</PageLink>
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import * as React from 'react';
-import styles from './DefaultPage.module.scss';
+import styles from './Footer.module.scss';
 
 type Props = {
 
 };
 const Footer = (props: Props) => {
   return (
-    <footer>
-
+    <footer className={styles.footer}>
+      <a href="https://iugmali.com">iugmali.com</a>
     </footer>
   );
 };

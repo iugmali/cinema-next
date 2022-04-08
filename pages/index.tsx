@@ -1,8 +1,8 @@
-import HomeScreen from "screens/HomeScreen";
+import TrendingScreen from "screens/TrendingScreen";
 import {getTrendingMovies, getTrendingPerson, getTrendingTV} from "data/trending";
 import {GetServerSideProps} from "next";
 
-export default HomeScreen;
+export default TrendingScreen;
 
 export const getServerSideProps:GetServerSideProps = async () => {
   const movies = await getTrendingMovies();
