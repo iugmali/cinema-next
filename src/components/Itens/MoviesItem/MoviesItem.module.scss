@@ -6,12 +6,12 @@
       box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
       transition: 0.5s;
       .item__title {
-        color: antiquewhite;
-        text-shadow: 2px 2px 0 #070707, 2px -2px 0 #070707, -2px 2px 0 #070707, -2px -2px 0 #070707, 2px 0px 0 #070707, 0px 2px 0 #070707, -2px 0px 0 #070707, 0px -2px 0 #070707;
+        color: #767676;
+        //text-shadow: 2px 2px 0 #777777, 2px -2px 0 #777777, -2px 2px 0 #777777, -2px -2px 0 #777777, 2px 0px 0 #777777, 0px 2px 0 #777777, -2px 0px 0 #777777, 0px -2px 0 #777777;
         transition: 0.1s;
       }
-      .item__descricao {
-        color: #000000;
+      .item__details {
+        color: #767676;
         font-weight: 700;
         //text-shadow: 2px 4px 11px #000000;
         transition: 0.1s;
