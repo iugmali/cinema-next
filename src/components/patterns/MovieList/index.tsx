@@ -1,12 +1,12 @@
 import Itens from "components/Itens";
-import {MediaItemList} from "../../../types/media";
-import MovieItem from "components/Itens/MediaItem";
+import {MediaItemData} from "../../../types/media";
+import MoviesItem from "components/Itens/MoviesItem";
 
-export default function MovieList ({movies}: MediaItemList) {
+export default function MovieList ({movies}: MediaItemData) {
   return (
     <Itens>
       {movies && movies.results.map((movie) => (
-        <MovieItem key={movie.id} {...movie} />
+        <MoviesItem key={movie.id} blurDataUrl={"/filme-poster.png"} displayItem={false} {...movie} />
       ))}
     </Itens>
   );
