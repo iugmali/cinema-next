@@ -7,7 +7,7 @@ export default function MoviePage({movie}:MovieDetailsData) {
   if (movie)
   return (
       <DefaultPage title={movie.title ?? movie.name ?? ""} >
-        <Section title={movie.title ?? movie.name ?? ""}>
+        <Section title={""}>
           <MovieDetailsItem blurDataUrl={"/filme-backdrop-path.png"} displayItem={true} {...movie} />
         </Section>
       </DefaultPage>
