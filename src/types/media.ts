@@ -26,7 +26,7 @@ export interface MediaItem {
   overview: string;
 }
 
-export interface MediaItemList {
+export interface MediaItemData {
   movies?: {
     results: Movie[]
   };
@@ -37,6 +37,6 @@ export interface MediaItemList {
     results: Person[]
   };
   videos?: {
-    results: Video[]
+    results: MediaVideoItem[]
   };
 }

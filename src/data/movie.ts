@@ -9,7 +9,7 @@ export async function getMovieDetails(id: string) {
   };
   // ${process.env['THEMOVIEDB_READ_ACCESS_TOKEN_3']}
   //
-  const FAQ_API_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env['THEMOVIEDB_READ_ACCESS_TOKEN_3']}&language=pt-BR&region=BR`;
+  const FAQ_API_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env['THEMOVIEDB_READ_ACCESS_TOKEN_3']}&language=en-US`;
   const myRequest = new Request(FAQ_API_URL);
   return await fetch(myRequest, myInit)
     .then((respostaDoServidor) => {
@@ -28,8 +28,6 @@ export async function getMovieVideos(id: string) {
     method: 'GET',
     headers: myHeaders
   };
-  // ${process.env['THEMOVIEDB_READ_ACCESS_TOKEN_3']}
-  //
   const FAQ_API_URL = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env['THEMOVIEDB_READ_ACCESS_TOKEN_3']}&language=pt-BR&region=BR`;
   const myRequest = new Request(FAQ_API_URL);
   return await fetch(myRequest, myInit)

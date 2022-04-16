@@ -10,3 +10,7 @@ export interface MovieVideoItem extends MediaVideoItem {
   site: string;
   key: string;
 }
+
+export interface MovieDetailsData {
+  movie: Movie;
+}

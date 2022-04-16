@@ -1,10 +1,16 @@
-import { useRouter } from 'next/router'
+import {getMovieDetails} from "../../../src/data/movie";
+import {GetServerSideProps} from "next";
+import MoviePage from "screens/MoviePage";
+import {Movie} from "../../../src/types/movie";
 
-const Post = () => {
-  const router = useRouter()
-  const { id } = router.query
+export default MoviePage;
 
-  return <p>Movie: {id}</p>
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const id = context.params ? typeof context.params.id === "string" ? context.params.id : "12" : "12";
+  const movie:Movie = await getMovieDetails(id);
+  return {
+    props: {
+      movie: movie
+    }
+  }
 }
-
-export default Post;
