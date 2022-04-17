@@ -1,13 +1,10 @@
 import * as React from 'react';
 import styles from './Footer.module.scss';
 
-type Props = {
-
-};
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p className={styles.footer__title}>Created by <a href="https://iugmali.com">iugmali.com</a></p>
+      <p className={styles.footer__title}>Created by <a rel="nofollow" href="https://iugmali.com">iugmali.com</a></p>
     </footer>
   );
 };
