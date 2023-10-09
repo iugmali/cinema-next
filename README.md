@@ -1,5 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# cinema-next
 
-## Production build
+This is a personal project that uses tmdb API to fetch movies that are trending nowadays. The project is built with nextjs and typescript.
+
+## Deployed at:
 
 [http://cinema-next-chi.vercel.app](https://cinema-next-chi.vercel.app)

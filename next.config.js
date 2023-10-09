@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     loader: 'custom',
     path: 'https://image.tmdb.org/t/p/w500'
-  }
+  },
+  output: 'standalone'
 }
 
 module.exports = nextConfig

@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p className={styles.footer__title}>Created by <a rel="nofollow" href="https://iugmali.com">iugmali.com</a></p>
+      <a rel="nofollow" href="https://iugmali.com"><p className={styles.footer__title}>Created by iugmali.com</p></a>
     </footer>
   );
 };

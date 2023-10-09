@@ -1,12 +1,13 @@
 import DefaultPage from "components/patterns/DefaultPage";
 import Section from "components/patterns/Section";
-import {MediaItemData} from "types/media";
+import MovieVideosList from "../../components/patterns/MovieVideosList";
+import {VideoItemData} from "../../types/media";
 
-export default function MovieVideos(props:MediaItemData) {
+export default function MovieVideos(props:VideoItemData) {
   return (
     <DefaultPage title={"Trending Media"}>
       <Section title={""}>
-        <MovieVideos {...props} />
+        <MovieVideosList {...props} />
       </Section>
     </DefaultPage>
   )

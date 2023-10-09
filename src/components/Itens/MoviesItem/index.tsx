@@ -20,6 +20,7 @@ const MoviesItem = (movie: Props) => {
       <PageLink to={`/movies/${movie.id}`} prefetch={false}>
         <div className={styles.item__image__mobile}>
           <Image
+            className={styles.item__image}
             loader={ImageLoader}
             src={movie.backdrop_path}
             alt={movie.title}
@@ -32,6 +33,7 @@ const MoviesItem = (movie: Props) => {
         </div>
         <div className={styles.item__image__desktop}>
           <Image
+            className={styles.item__image}
             loader={ImageLoader}
             src={movie.poster_path}
             alt="Poster do Filme"

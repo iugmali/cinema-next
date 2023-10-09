@@ -1,80 +1,74 @@
 @import "/src/styles/breakpoints.scss";
 .item {
     background: none;
-    @media screen and (min-width: map-get($grid-breakpoints,lg)) {
-      grid-template-columns: auto 1fr;
-      grid-template-rows: 1fr;
-      grid-column-gap: .5rem;
-      font-size: 1rem;
-    }
-    //&:hover, &:active {
-    //  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
-    //  transition: 0.5s;
-    //  .item__title {
-    //    color: antiquewhite;
-    //    text-shadow: 2px 2px 0 #070707, 2px -2px 0 #070707, -2px 2px 0 #070707, -2px -2px 0 #070707, 2px 0px 0 #070707, 0px 2px 0 #070707, -2px 0px 0 #070707, 0px -2px 0 #070707;
-    //    transition: 0.1s;
-    //  }
-    //  .item__descricao {
-    //    color: #000000;
-    //    font-weight: 700;
-    //    //text-shadow: 2px 4px 11px #000000;
-    //    transition: 0.1s;
-    //  }
-    //}
+    justify-self: center;
     border-radius: 0.5rem;
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 1024px;
     max-height: 600px;
-    &__image__desktop {
-      display: none;
-    }
-    &__image__mobile {
+    &__image__wrapper {
       display: block;
-      margin: 0 auto;
+      margin: 1rem auto;
     }
-    &__title {
-      justify-self: center;
-      font-family: 'Barlow', sans-serif;
-      text-align: center;
-      font-weight: 700;
-      color: rgb(33,33,33);
-      font-size: .7rem;
-      padding: 0.3rem;
-      @media screen and (min-width: map-get($grid-breakpoints,xs)) {
-        font-size: .9rem;
-        padding: 0.5rem;
-      }
-      @media screen and (min-width: map-get($grid-breakpoints,md)) {
-        font-size: 1.2rem;
-      }
+    &__image {
+      border-radius: 1rem;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
+      box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
     }
     &__descricao {
-      display: grid;
+      &__title {
+        justify-self: center;
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-weight: 700;
+        color: rgb(33,33,33);
+        font-size: 1.1rem;
+        padding: 0.3rem;
+        @media screen and (min-width: map-get($grid-breakpoints,xs)) {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+        @media screen and (min-width: map-get($grid-breakpoints,md)) {
+          font-size: 2rem;
+        }
+      }
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-    }
-    &__details {
-      justify-self: center;
-      font-family: 'Barlow', sans-serif;
-      text-align: justify;
-      font-weight: 400;
-      color: rgb(33,33,33);
-      font-size: .8rem;
-      padding-bottom: 0.5rem;
-      @media screen and (min-width: map-get($grid-breakpoints,md)) {
+      &__links {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      &__link {
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: underline;
+      }
+      &__details {
+        justify-self: center;
+        font-family: 'Barlow', sans-serif;
+        text-align: justify;
+        font-weight: 400;
+        color: rgb(33,33,33);
         font-size: 1rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @media screen and (min-width: map-get($grid-breakpoints,md)) {
+          font-size: 1.2rem;
+        }
       }
     }
-    @media screen and (min-width: map-get($grid-breakpoints,xl)){
-      .item__image__desktop {
-        display: block;
-      }
-      padding: 0;
-      //grid-template-columns: 236px;
-      //grid-column-gap: .5rem;
-    }
+
+  @media screen and (min-width: map-get($grid-breakpoints,lg)) {
+
+  }
+  @media screen and (min-width: map-get($grid-breakpoints,xl)){
+
+  }
 }
