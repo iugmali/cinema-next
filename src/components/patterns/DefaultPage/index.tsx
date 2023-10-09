@@ -9,6 +9,7 @@ import {RecoilRoot} from "recoil";
 type Props = {
   children?: React.ReactNode;
   pageTitle?: string;
+  header?: boolean;
   title: string;
 };
 const DefaultPage = (props: Props) => {
@@ -16,11 +17,12 @@ const DefaultPage = (props: Props) => {
     <RecoilRoot>
       <div className={styles.page} >
         <PageTitle title={props.title} />
-        <Header title={props.title} />
+        {props.header && <Header title={props.title} />}
         <main className={styles.page__main}>
-          <h1 className={styles.page__title}>{props.pageTitle ? props.pageTitle : ''}</h1>
+          {/*<h1 className={styles.page__title}>{props.pageTitle ? props.pageTitle : ''}</h1>*/}
           {props.children}
         </main>
+        <div className={styles.page__spacer}></div>
         <Footer />
       </div>
     </RecoilRoot>
