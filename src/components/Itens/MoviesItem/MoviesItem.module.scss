@@ -16,6 +16,7 @@
         transition: 0.1s;
       }
     }
+    margin-top: 1rem;
     border-radius: 0.5rem;
     display: grid;
     grid-template-rows: auto auto 30%;
@@ -25,10 +26,18 @@
     max-width: 800px;
     max-height: 600px;
     .item__image__desktop {
+      margin: 0 auto;
       display: none;
     }
     .item__image__mobile {
+      margin: 0 auto;
       display: block;
+    }
+    .item__image {
+      border-radius: 1rem;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
+      box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
     }
     .item__title{
       justify-self: center;

@@ -5,27 +5,27 @@
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  //align-content: start;
+  justify-content: center;
   &__main {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: none;
-    @media screen and (min-width: map-get($grid-breakpoints, sm)){
-      max-width: map-get($container-max-widths, sm);
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, md)){
-      max-width: map-get($container-max-widths, md);
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, lg)){
-      max-width: map-get($container-max-widths, lg);
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, xl)){
-      max-width: map-get($container-max-widths, xl);
-    }
-    @media screen and (min-width: map-get($grid-breakpoints, xxl)){
-      max-width: map-get($container-max-widths, xxl);
-    }
+    //@media screen and (min-width: map-get($grid-breakpoints, sm)){
+    //  max-width: map-get($container-max-widths, sm);
+    //}
+    //@media screen and (min-width: map-get($grid-breakpoints, md)){
+    //  max-width: map-get($container-max-widths, md);
+    //}
+    //@media screen and (min-width: map-get($grid-breakpoints, lg)){
+    //  max-width: map-get($container-max-widths, lg);
+    //}
+    //@media screen and (min-width: map-get($grid-breakpoints, xl)){
+    //  max-width: map-get($container-max-widths, xl);
+    //}
+    //@media screen and (min-width: map-get($grid-breakpoints, xxl)){
+    //  max-width: map-get($container-max-widths, xxl);
+    //}
   }
   &__title {
     color: rgb(27, 27, 27);

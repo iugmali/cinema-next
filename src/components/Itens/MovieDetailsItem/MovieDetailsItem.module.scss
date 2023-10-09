@@ -1,26 +1,22 @@
 @import "/src/styles/breakpoints.scss";
 .item {
     background: none;
-    @media screen and (min-width: map-get($grid-breakpoints,lg)) {
-      grid-template-columns: auto 1fr;
-      grid-template-rows: 1fr;
-      grid-column-gap: .5rem;
-      font-size: 1rem;
-    }
+    justify-self: center;
     border-radius: 0.5rem;
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 1024px;
     max-height: 600px;
-    &__image__desktop {
-      display: none;
-    }
-    &__image__mobile {
+    &__image__wrapper {
       display: block;
-      margin: 0 auto;
+      margin: 1rem auto;
+    }
+    &__image {
+      border-radius: 1rem;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
+      box-shadow: 10px 10px 5px 0px rgba(204,204,204,1);
     }
     &__descricao {
       &__title {
@@ -39,13 +35,15 @@
           font-size: 2rem;
         }
       }
-      display: grid;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       &__links {
         display: flex;
         justify-content: space-evenly;
       }
       &__link {
+        margin: 0 auto;
         text-align: center;
         text-decoration: underline;
       }
@@ -67,12 +65,10 @@
       }
     }
 
-    @media screen and (min-width: map-get($grid-breakpoints,xl)){
-      .item__image__desktop {
-        display: block;
-      }
-      padding: 0;
-      //grid-template-columns: 236px;
-      //grid-column-gap: .5rem;
-    }
+  @media screen and (min-width: map-get($grid-breakpoints,lg)) {
+
+  }
+  @media screen and (min-width: map-get($grid-breakpoints,xl)){
+
+  }
 }
