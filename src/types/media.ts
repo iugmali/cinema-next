@@ -16,6 +16,7 @@ export interface MediaVideoItem {
 }
 
 export interface MediaItem {
+  success?: boolean;
   first_air_date?: string;
   release_date?: string;
   title?: string;
@@ -25,7 +26,9 @@ export interface MediaItem {
   poster_path: string;
   overview: string;
 }
-
+export interface VideoItemData {
+  videos?: MediaVideoItem[];
+}
 export interface MediaItemData {
   movies?: {
     results: Movie[]
