@@ -1,0 +1,10 @@
+.video {
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__wrapper {
+    iframe {
+      border: 0;
+    }
+  }
+}
