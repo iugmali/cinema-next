@@ -1,8 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+html {
+  background: rgb(0,212,255);
+  background: linear-gradient(180deg, rgba(0,212,255,1) 11%, rgba(199,199,201,1) 22%, rgba(198,199,201,1) 44%, rgba(196,199,202,1) 70%, rgba(0,212,255,1) 91%);
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -36,6 +35,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  background: transparent;
 }
 ol, ul {
   list-style: none;

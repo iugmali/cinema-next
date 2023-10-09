@@ -55,10 +55,14 @@
         text-align: justify;
         font-weight: 400;
         color: rgb(33,33,33);
-        font-size: .8rem;
+        font-size: 1rem;
         padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         @media screen and (min-width: map-get($grid-breakpoints,md)) {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
     }
