@@ -1,7 +1,7 @@
-import {getMovieDetails} from "../../../src/data/movie";
+import {getMovieDetails} from "../../../data/movie";
 import {GetServerSideProps} from "next";
 import MoviePage from "screens/MoviePage";
-import {Movie} from "../../../src/types/movie";
+import {Movie} from "../../../types/movie";
 
 export default MoviePage;
 
