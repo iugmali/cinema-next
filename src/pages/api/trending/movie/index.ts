@@ -7,5 +7,9 @@ export default async function handler(
   res: NextApiResponse<JSON>
 ) {
   const response = await getTrendingMovies();
-  res.status(200).json(response);
+  if (response) {
+    res.status(response!.status).json(response!.data);
+  } else {
+    res.status(500);
+  }
 }

@@ -1,6 +1,6 @@
 import {MediaItem} from "./media";
 
-export interface Series extends MediaItem{
+export interface TV extends MediaItem{
   name: string;
   first_air_date: string;
 }

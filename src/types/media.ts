@@ -1,4 +1,4 @@
-import {Serie} from "./serie";
+import {TV} from "./tv";
 import {Movie} from "./movie";
 import {Person} from "./person";
 
@@ -33,8 +33,8 @@ export interface MediaItemData {
   movies?: {
     results: Movie[]
   };
-  series?: {
-    results: Serie[]
+  tv?: {
+    results: TV[]
   };
   people?: {
     results: Person[]

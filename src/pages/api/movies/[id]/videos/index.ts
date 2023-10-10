@@ -8,5 +8,9 @@ export default async function handler(
 ) {
   const id = String(req.query.id);
   const response = await getMovieVideos(id);
-  res.status(200).json(response);
+  if (response) {
+    res.status(response!.status).json(response!.data);
+  } else {
+    res.status(500);
+  }
 }
