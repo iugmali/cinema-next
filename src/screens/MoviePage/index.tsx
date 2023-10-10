@@ -4,7 +4,6 @@ import MovieDetailsItem from "../../components/Itens/MovieDetailsItem";
 import NotFound from "../NotFound";
 
 export default function MoviePage({movie}:MovieDetailsData) {
-  console.log(movie);
   if (movie.success == false) {
     return <NotFound />
   } else {

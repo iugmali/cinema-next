@@ -6,10 +6,19 @@ export default MovieVideos;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = String(context.params?.id) ?? "12";
-  const videos = await getMovieVideos(id);
+
+  let movieVideos;
+
+  const movieVideosResponse = await getMovieVideos(id);
+  if (movieVideosResponse) {
+    movieVideos = movieVideosResponse.data;
+  } else {
+    movieVideos = {results: []};
+  }
+
   return {
     props: {
-      videos: videos.results
+      videos: movieVideos.results
     }
   }
 }
